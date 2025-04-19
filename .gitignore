@@ -1,0 +1,9 @@
+# Hugo generated files
+/public/
+/resources/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+*.swp
+
