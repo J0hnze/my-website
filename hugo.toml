@@ -1,3 +1,31 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "http://localhost:1313/"
+languageCode = "en-gb"
+title = "Johnze"
+theme = "ananke"
+
+[params]
+  customCSS = ["css/custom.css"]
+
+
+[pagination]
+  pagerSize = 5
+
+
+[menu]
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "ctf"
+    name = "CTF Walkthroughs"
+    url = "/ctf/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 3
