@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    {{ $style := resources.Get "css/main.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    
+    {{ block "head" . }}{{ end }}
+</head>
+<body>
+    <header>
+        {{ partial "header.html" . }}
+    </header>
+    
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    
+    <footer>
+        {{ partial "footer.html" . }}
+    </footer>
+    
+    {{ $script := resources.Get "js/main.js" | minify | fingerprint }}
+    <script src="{{ $script.Permalink }}"></script>
+    
+    {{ block "scripts" . }}{{ end }}
+</body>
+</html> 

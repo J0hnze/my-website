@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="container">
+    <section class="hero">
+        <h1>Welcome to {{ .Site.Title }}</h1>
+        <p>{{ .Site.Params.description }}</p>
+    </section>
+
+    {{ partial "recent-posts.html" . }}
+</div>
+{{ end }} 

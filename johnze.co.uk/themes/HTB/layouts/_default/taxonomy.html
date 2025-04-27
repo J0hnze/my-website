@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="container">
+    <header class="section-header">
+        <h1>{{ .Title }}</h1>
+    </header>
+
+    <div class="content-list">
+        {{ range .Pages }}
+        <article class="content-card">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <div class="meta">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                {{ if .Params.tags }}
+                <div class="tags">
+                    {{ range .Params.tags }}
+                    <span class="tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+            <p>{{ .Description }}</p>
+        </article>
+        {{ end }}
+    </div>
+</div>
+{{ end }} 

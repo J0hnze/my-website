@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <div class="container">
+        <a href="{{ .Site.BaseURL }}" class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="/images/logo.png" alt="Logo" style="height: 150px; width: 150px; display: inline-block; vertical-align: middle;" />
+            {{ .Site.Title }}
+        </a>
+        
+        <div class="nav-links">
+            <a href="{{ .Site.BaseURL }}" class="nav-link">Home</a>
+            <a href="{{ .Site.BaseURL }}blog" class="nav-link">Blog</a>
+            <a href="{{ .Site.BaseURL }}ctf" class="nav-link">CTF</a>
+            <a href="{{ .Site.BaseURL }}projects" class="nav-link">Projects</a>
+        </div>
+    </div>
+</nav>

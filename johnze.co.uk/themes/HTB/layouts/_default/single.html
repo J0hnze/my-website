@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="container">
+    <article class="content">
+        <header class="content-header">
+            <h1>{{ .Title }}</h1>
+            <div class="meta">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                {{ if .Params.tags }}
+                <div class="tags">
+                    {{ range .Params.tags }}
+                    <span class="tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+            {{ if eq .Section "ctf" }}
+            <div class="ctf-info">
+                <span class="difficulty">{{ .Params.difficulty }}</span>
+                <span class="points">{{ .Params.points }} points</span>
+            </div>
+            {{ end }}
+        </header>
+
+        <div class="content-body">
+            {{ .Content }}
+        </div>
+
+        <footer class="content-footer">
+            {{ if .PrevInSection }}
+            <a href="{{ .PrevInSection.RelPermalink }}" class="nav-link prev">← {{ .PrevInSection.Title }}</a>
+            {{ end }}
+            {{ if .NextInSection }}
+            <a href="{{ .NextInSection.RelPermalink }}" class="nav-link next">{{ .NextInSection.Title }} →</a>
+            {{ end }}
+        </footer>
+    </article>
+</div>
+{{ end }} 
