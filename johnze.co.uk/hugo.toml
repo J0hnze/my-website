@@ -1,0 +1,19 @@
+baseURL = "https://johnze.co.uk/"
+languageCode = "en-gb"
+title = "JohnZe"
+theme = "HTB"
+
+[params]
+  description = "Personal blog and CTF write-ups"
+  author = "JohnZe"
+  github = "yourusername"
+  twitter = "yourusername"
+
+[params.social]
+  github = "yourusername"
+  twitter = "yourusername"
+  linkedin = "yourusername"
+
+[params.features]
+  syntaxHighlighting = true
+  imageOptimization = true
