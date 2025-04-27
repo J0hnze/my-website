@@ -1,3 +1,6 @@
+@import "header.css";
+@import "footer.css";
+
 /* Only global and section styles remain here */
 :root {
     --primary-color: #9fef00;
@@ -230,6 +233,32 @@ a:hover {
     color: var(--primary-color);
 }
 
+.nav-links-btm {
+    display: grid;
+    grid-template-columns: 2.5% 45% 5% 45% 2.5%;
+    align-items: center;
+    margin: 2rem 0 1rem 0;
+}
+.nav-link-prev {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav-link-next {
+    grid-column: 4 / 5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.nav-links-btm p {
+    grid-column: 3 / 4;
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--secondary-text);
+}
+
 /* Footer Styles */
 .footer {
     margin-top: auto;
@@ -258,17 +287,8 @@ a:hover {
     color: var(--secondary-text);
 }
 
-/* Theme Toggle */
-.theme-toggle {
-    background: none;
-    border: none;
-    color: var(--text-color);
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-.theme-toggle:hover {
-    color: var(--primary-color);
+.content-footer {
+    text-align: center;
 }
 
 .projects {
@@ -290,4 +310,71 @@ a:hover {
 .github-link:hover {
     background: #0366d6;
     color: #fff;
+}
+
+.terminal-code-block {
+    background: #23272e;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    margin: 2rem 0;
+    overflow: hidden;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+}
+.terminal-bar {
+    background: #181a1b;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.terminal-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+.terminal-dot.red { background: #ff5f56; }
+.terminal-dot.yellow { background: #ffbd2e; }
+.terminal-dot.green { background: #27c93f; }
+.terminal-code-block pre {
+    background: none;
+    color: #eaeaea;
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 1rem;
+}
+.terminal-code-block code {
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.center-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin: 2rem 0;
+}
+.center-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.center-image figcaption {
+    margin-top: 0.5rem;
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+    text-align: center;
+}
+@media (max-width: 900px) {
+    .center-image {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 } 

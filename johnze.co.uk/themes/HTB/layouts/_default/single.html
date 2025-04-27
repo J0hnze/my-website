@@ -26,12 +26,23 @@
         </div>
 
         <footer class="content-footer">
-            {{ if .PrevInSection }}
-            <a href="{{ .PrevInSection.RelPermalink }}" class="nav-link prev">← {{ .PrevInSection.Title }}</a>
-            {{ end }}
-            {{ if .NextInSection }}
-            <a href="{{ .NextInSection.RelPermalink }}" class="nav-link next">{{ .NextInSection.Title }} →</a>
-            {{ end }}
+            <hr class="footer-hr" />
+            <div class="nav-links-btm">
+                <div class="nav-link-prev">
+                    {{ if .PrevInSection }}
+                    <a href="{{ .PrevInSection.RelPermalink }}" class="nav-link prev">← {{ .PrevInSection.Title }}</a>
+                    {{ end }}
+                </div>
+                <p>|</p>
+                <div class="nav-link-next">
+                    {{ if .NextInSection }}
+                    <a href="{{ .NextInSection.RelPermalink }}" class="nav-link next">{{ .NextInSection.Title }} →</a>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; {{ now.Format "2006" }} {{ .Site.Params.author }}. All rights reserved.
+            </div>
         </footer>
     </article>
 </div>
