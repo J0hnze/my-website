@@ -13,6 +13,8 @@ theme = "HTB"
   github = "yourusername"
   twitter = "yourusername"
   linkedin = "yourusername"
+  mastadon = ""
+  bluesky = ""
 
 [params.features]
   syntaxHighlighting = true
