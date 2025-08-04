@@ -19,7 +19,7 @@ listing_image: blog/2024/defcon-badge-hack-part-one/images/badge-front.jpeg
 #mages/badge-front.jpeg
 ---
 
-## A Little Bit About Me
+### A Little Bit About Me
 
 I have always loved puzzles since I was little, from my first jigsaw to the CTF challenges on [Hack The Box](https://app.hackthebox.com/login?redirect=%2Fhome) and [Try Hack Me](https://tryhackme.com/).
 So when I saw the puzzles that were built into some of the badges from [#Defcon](https://defcon.org/)
@@ -29,7 +29,7 @@ Now that I finally managed to get hold of an electronic badge, I was super excit
 
 I will attempt to give a rundown of the steps it have taken to find/solve the puzzle(s) and my thought processes behind them.
 
-#### What's On The Badge?
+### What's On The Badge?
 
 First things first, let's have a look at the badge and see what we are working with.
 
@@ -39,6 +39,8 @@ Below are some images of the badge (front and back)
     "images/badge-front.jpeg" "Front of the badge"
     "images/badge-back.jpeg" "Back of the badge"
 >}}
+
+---
 
 On the front of the badge, there is a silkscreen of the CovertSwarm logo with the words "YOU DESERVE TO BE HACKED" in the middle.
 
@@ -52,7 +54,7 @@ On the back there is an `Arduino Nano` in the center underneath the Arduino ther
 
 ----
 
-#### Other Areas Of Interest
+### Other Areas Of Interest
 
 Underneath the Arduino there is a 'hidden' message that states "Nothing To See here! Go away!"
 
@@ -93,7 +95,7 @@ This suggests that there may be alternate functions on the device.
 
 ----
 
-#### Commands Available
+### Commands Available
 
 {{< padded-center-image
     "images/help-me.jpeg" "Help"
@@ -119,7 +121,7 @@ The full log#0 can be read [Here](txt-files/log-0.txt)
 
 ----
 
-#### Cracking The Combination
+### Cracking The Combination
 
 On the underside of the badge there is an array of 8 LEDs and a set of corresponding unpopulated pads to the right of them.
 
@@ -156,8 +158,9 @@ There are 256 combinations and on average it is going to take 6 mins to change t
 ```text
 256 * 6 = 1536 mins
 Thats just over 25 straight hours!
-
 ```
+
+---
 
 Thats assuming there are no mistakes and I don't forget which combinations I have already tried.
 
@@ -165,7 +168,7 @@ This wont do. I should be able to automate this using a Raspberry Pi Pico or ano
 
 ----
 
-#### Logic Is The Key
+### Logic Is The Key
 
 I don't know much about electronics currently; after doing some research it looks like its possible to achieve my goal two ways either by using PNP transistors or perhaps using some relays,
 
@@ -180,7 +183,7 @@ The Repository for this code is located [here](https://github.com/ponix4k/cs_bad
 
 ----
 
-#### Casualties
+### Casualties
 
 It is worth noting that there _IS_ a difference in the voltages from the Arduino Nano (5v) and the Pico (3.3v) and trying to read the serial monitor from the TX bin and killed this pin on the Device. looks like the another casualty of this experiment.
 
@@ -191,7 +194,7 @@ It is worth noting that there _IS_ a difference in the voltages from the Arduino
 
 ----
 
-#### Timing Is Important
+### Timing Is Important
 
 Using the Relay Circuit takes about 15 seconds per iteration rather than 6 mins, again some quick napkin maths to work out the time difference.
 
@@ -228,7 +231,6 @@ A secure delivery method and storage for spaceship logs, HQ directives and new o
 CS2023{H4rDc0d3d_c0
 insert password > 
 ```
-
 ----
 
 ```text
