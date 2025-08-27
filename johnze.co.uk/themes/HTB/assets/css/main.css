@@ -1,0 +1,457 @@
+@import "header.css";
+@import "footer.css";
+
+/* Only global and section styles remain here */
+:root {
+    --primary-color: #9fef00;
+    --background-color: #1a1b2e;
+    --text-color: #ffffff;
+    --secondary-text: #9ba1a6;
+    --accent-color: #2d2d3b;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex: 1 0 auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: var(--accent-color);
+    margin: 2rem 0rem;
+    border-radius: 10px;
+}
+
+/* Recent Posts & CTF Write-ups */
+.recent-posts {
+    padding: 2rem 0;
+}
+
+.section-subheader {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.section-divider {
+    border: none;
+    border-bottom: 2px solid #3a4e7a;
+    margin-bottom: 1.5rem;
+}
+
+.post-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.post-grid-squares {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.post-card {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 10px;
+}
+
+.post-card:nth-child(odd) {
+    background-color: #23243a;
+}
+
+.post-card:nth-child(even) {
+    background-color: #2d2d3b;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder-thumbnail {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.year-separator {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.ctf-info {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+}
+
+.binary-rain {
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    font-size: 1.5rem;
+    color: #9fef00;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    padding: 1.5rem 0.5rem;
+    text-align: center;
+    background: none;
+}
+
+.binary-rain::before {
+    content: "010101\A110011\A101010\A011001\A100110\A001101";
+    white-space: pre;
+    display: block;
+    color: #9fef00;
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.post-content h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.subtitle {
+    color: var(--secondary-text);
+    margin: 0.5rem 0;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: var(--background-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* Icon Styles */
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #223a5e;
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-links-btm {
+    display: grid;
+    grid-template-columns: 2.5% 45% 5% 45% 2.5%;
+    align-items: center;
+    margin: 2rem 0 1rem 0;
+}
+.nav-link-prev {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav-link-next {
+    grid-column: 4 / 5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.nav-links-btm p {
+    grid-column: 3 / 4;
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--secondary-text);
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: #223a5e;
+    padding: 2rem 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    text-align: center;
+    color: var(--secondary-text);
+}
+
+.content-footer {
+    text-align: center;
+}
+
+.projects {
+    padding: 2rem 0;
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    background: #24292e;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.github-link:hover {
+    background: #0366d6;
+    color: #fff;
+}
+
+.terminal-code-block {
+    background: #23272e;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    margin: 2rem 0;
+    overflow: hidden;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+}
+.terminal-bar {
+    background: #181a1b;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.terminal-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+.terminal-dot.red { background: #ff5f56; }
+.terminal-dot.yellow { background: #ffbd2e; }
+.terminal-dot.green { background: #27c93f; }
+.terminal-code-block pre {
+    background: none;
+    color: #eaeaea;
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 1rem;
+}
+.terminal-code-block code {
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.center-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin: 2rem 0;
+}
+.center-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.center-image figcaption {
+    margin-top: 0.5rem;
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+    text-align: center;
+}
+@media (max-width: 900px) {
+    .center-image {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+} 
+
+
+/* Custom image CSS added by john */
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.side-by-side-2-cols {
+    display: flex;
+    gap: 15px;
+	margin-bottom: 20px;
+}
+
+.side-by-side-2-cols figure {
+    flex: 1;
+}
+
+.side-by-side-2-cols img {
+    width: 50%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.side-by-side-3-cols {
+    display: flex;
+    gap: 10px;
+	padding: 10px;
+}
+
+.side-by-side-3-cols img {
+    width: 33%;
+}
+
+.padded-center-image img {
+    display: block;
+    margin: 10px auto;
+	width: 90%;
+	border-radius: 15px;
+}
+
+.image-left, .image-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.image-left img, .image-right img {
+    width: 40%;
+}
+
+.image-left .text, .image-right .text {
+    flex: 1;
+}
+
+.image-right {
+    flex-direction: row-reverse;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .side-by-side, .image-left, .image-right {
+        flex-direction: column;
+        text-align: center;
+    }
+    .side-by-side img, .image-left img, .image-right img {
+        width: 100%;
+        padding: 10px;
+	}
+}

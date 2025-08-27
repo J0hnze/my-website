@@ -3,6 +3,18 @@ languageCode = "en-gb"
 title = "JohnZe"
 theme = "HTB"
 
+contentDir = "content"
+
+[permalinks]
+  blog = "/blog/:year/:slug/"
+  projects = "/projects/:year/:slug/"
+  ctfs = "/ctfs/:year/:slug/"
+
+[archetypeOverrides]
+  blog = "blog/index.md"
+  projects = "projects/index.md"
+  ctfs = "ctfs/index.md"
+
 [params]
   description = "Personal blog and CTF write-ups"
   author = "JohnZe"
@@ -13,6 +25,8 @@ theme = "HTB"
   github = "yourusername"
   twitter = "yourusername"
   linkedin = "yourusername"
+  mastadon = ""
+  bluesky = ""
 
 [params.features]
   syntaxHighlighting = true

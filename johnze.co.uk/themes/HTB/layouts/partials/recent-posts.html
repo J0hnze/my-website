@@ -1,0 +1,74 @@
+<section class="recent-posts">
+    <div class="container">
+        <h2>Recent Posts</h2>
+        <div class="section-subheader">Blog Entries</div>
+
+        <div class="post-grid-squares">
+            {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+            <article class="post-card">
+                <div class="post-thumbnail">
+                    {{ $thumbnail := .Resources.GetMatch "thumbnail.png" }}
+                    {{ if $thumbnail }}
+                    <img src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}">
+                    {{ else }}
+                    <div class="placeholder-thumbnail">
+                        <div class="binary-rain"></div>
+                    </div>
+                    {{ end }}
+                </div>
+                <div class="post-content">
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <p class="subtitle">{{ .Params.subtitle }}</p>
+                    <div class="post-meta">
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                        {{ if .Params.tags }}
+                        <div class="tags">
+                            {{ range .Params.tags }}
+                            <span class="tag">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+
+        <div class="section-subheader" style="margin-top:2rem;">CTF Write-ups</div>
+
+        <div class="post-grid-squares">
+            {{ range first 3 (where .Site.RegularPages "Section" "ctf") }}
+            <article class="post-card">
+                <div class="post-thumbnail">
+                    {{ $thumbnail := .Resources.GetMatch "thumbnail.png" }}
+                    {{ if $thumbnail }}
+                    <img src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}">
+                    {{ else }}
+                    <div class="placeholder-thumbnail">
+                        <div class="binary-rain"></div>
+                    </div>
+                    {{ end }}
+                </div>
+                <div class="post-content">
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <p class="subtitle">{{ with .Params.subtitle }}{{ . }}{{ else }}No subtitle provided.{{ end }}</p>
+                    <div class="post-meta">
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                        {{ if .Params.tags }}
+                        <div class="tags">
+                            {{ range .Params.tags }}
+                            <span class="tag">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                        {{ else }}
+                        <div class="tags">
+                            <span class="tag">ctf</span>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section> 

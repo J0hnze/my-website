@@ -1,0 +1,7 @@
+name = "HTB"
+description = "A modern, responsive theme for HackTheBox writeups"
+version = "0.1.0"
+min_version = "0.112.0"
+license = "MIT"
+tags = ["hackthebox", "writeups", "security", "ctf"]
+features = ["dark-mode", "responsive", "syntax-highlighting"] 

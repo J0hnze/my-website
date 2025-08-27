@@ -1,7 +1,6 @@
 # Hugo
 johnze.co.uk/public/
 johnze.co.uk/resources/
-johnze.co.uk/themes/
 
 # OS generated files
 .DS_Store
@@ -23,4 +22,5 @@ yarn-error.log
 .vscode/
 *.swp
 *.swo
+
 

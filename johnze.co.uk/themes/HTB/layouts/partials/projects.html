@@ -1,0 +1,18 @@
+<section class="projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="post-grid-squares">
+            {{ range where .Site.RegularPages "Section" "projects" }}
+            <article class="post-card">
+                <div class="post-content">
+                    <h3>{{ .Title }}</h3>
+                    <p class="subtitle">{{ .Params.description }}</p>
+                    <a href="{{ .Params.github }}" class="github-link" target="_blank" rel="noopener noreferrer">
+                        View on GitHub
+                    </a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section> 
