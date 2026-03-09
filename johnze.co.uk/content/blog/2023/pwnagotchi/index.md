@@ -6,6 +6,7 @@ tags:
     - Hacking
     - Electronics
     - Raspberry Pi
+    - Wifi
 draft: false
 author: John
 author_email: ponix@protonmail.com

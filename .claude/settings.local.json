@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo --minify)",
+      "Bash(dir /b \"c:\\\\Developer\\\\Projects\\\\my-website\\\\johnze.co.uk\\\\public\\\\css\")"
+    ]
+  }
+}
