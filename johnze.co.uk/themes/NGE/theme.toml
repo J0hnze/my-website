@@ -1,0 +1,7 @@
+name = "NGE"
+description = "Neon Genesis Evangelion — Eva Unit 01 dark theme for johnze.co.uk"
+version = "1.0.0"
+min_version = "0.112.0"
+license = "MIT"
+tags = ["nge", "evangelion", "dark", "cyberpunk", "blog", "ctf"]
+features = ["dark-mode", "responsive", "syntax-highlighting"]

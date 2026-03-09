@@ -1,0 +1,9 @@
+{{ $lang := .Get "lang" | default "" }}
+<div class="terminal-code-block">
+  <div class="terminal-bar">
+    <span class="terminal-dot red"></span>
+    <span class="terminal-dot yellow"></span>
+    <span class="terminal-dot green"></span>
+  </div>
+  <pre><code{{ with $lang }} class="language-{{ . }}"{{ end }}>{{ .Inner | safeHTML }}</code></pre>
+</div> 

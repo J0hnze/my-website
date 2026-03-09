@@ -1,0 +1,10 @@
+/* Copied from HTB footer.css for LHS theme. Adjust only brand colors if needed. */
+
+.footer {
+    background-color: #23243a;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* ...rest of footer.css from HTB... */

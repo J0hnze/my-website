@@ -1,0 +1,8 @@
+/* Copied from HTB header.css for LHS theme. Adjust only brand colors if needed. */
+
+.navbar {
+    background-color: #00bfff;
+    padding: 1rem 0;
+}
+
+/* ...rest of header.css from HTB... */

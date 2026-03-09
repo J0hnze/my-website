@@ -1,0 +1,15 @@
+@import "header.css";
+@import "footer.css";
+
+/* Only global and section styles remain here */
+:root {
+    --primary-color: #00bfff; /* LHS brand color */
+    --background-color: #181a2b;
+    --text-color: #f5f5f5;
+    --secondary-text: #b0b8c1;
+    --accent-color: #23243a;
+}
+
+/* ...existing code from HTB main.css, but with LHS brand colors above ... */
+
+/* Copy/paste the rest of the main.css content here, keeping all layout, image, and text block styles identical to HTB */
