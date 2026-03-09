@@ -16,7 +16,7 @@ contentDir = "content"
   ctfs = "ctfs/index.md"
 
 [params]
-  description = "Personal blog, CTF write-ups and other projects"
+  description = "Personal blog, CTF write-ups and other projects.  its a work in progress"
   author = "JohnZe"
 
 [params.social]
